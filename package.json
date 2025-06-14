@@ -47,15 +47,15 @@
     "vite",
     "nuxt"
   ],
-  "author": "Your Name <your.email@example.com>",
+  "author": "evanz1215 <evanz1215@github.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/vue-svg-icon.git"
+    "url": "https://github.com/evanz1215/vue-svg-icon.git"
   },
-  "homepage": "https://github.com/your-username/vue-svg-icon#readme",
+  "homepage": "https://github.com/evanz1215/vue-svg-icon#readme",
   "bugs": {
-    "url": "https://github.com/your-username/vue-svg-icon/issues"
+    "url": "https://github.com/evanz1215/vue-svg-icon/issues"
   },
   "peerDependencies": {
     "vue": "^3.0.0"

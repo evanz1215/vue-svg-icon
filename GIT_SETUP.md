@@ -46,7 +46,7 @@ git config core.eol lf
 2. 添加遠端儲存庫：
 
 ```bash
-git remote add origin https://github.com/your-username/vue-svg-icon.git
+git remote add origin https://github.com/evanz1215/vue-svg-icon.git
 git branch -M main
 git push -u origin main
 ```
@@ -54,7 +54,7 @@ git push -u origin main
 ### GitLab
 
 ```bash
-git remote add origin https://gitlab.com/your-username/vue-svg-icon.git
+git remote add origin https://gitlab.com/evanz1215/vue-svg-icon.git
 git branch -M main
 git push -u origin main
 ```
@@ -122,11 +122,11 @@ chore: 建置工具或輔助工具變動
 {
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/vue-svg-icon.git"
+    "url": "https://github.com/evanz1215/vue-svg-icon.git"
   },
-  "homepage": "https://github.com/your-username/vue-svg-icon#readme",
+  "homepage": "https://github.com/evanz1215/vue-svg-icon#readme",
   "bugs": {
-    "url": "https://github.com/your-username/vue-svg-icon/issues"
+    "url": "https://github.com/evanz1215/vue-svg-icon/issues"
   }
 }
 ```

@@ -1,21 +1,22 @@
-# ?ç½®?ªå?ç¾©å?æ¨™è·¯å¾?
-## Vite + Vue 3 ?ç½®
+# ?ï¿½ç½®?ï¿½ï¿½?ç¾©ï¿½?æ¨™è·¯ï¿½?
+
+## Vite + Vue 3 ?ï¿½ç½®
 
 ### vite.config.ts
 
 ```typescript
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-import { viteSvgIcon } from "@evanz1215/vue-svg-icon";
+import { viteSvgIcon } from "vue-smart-icons";
 
 export default defineConfig({
   plugins: [
     vue(),
     viteSvgIcon({
       iconPaths: [
-        "src/assets/icons", // ?è¨­è·¯å?
-        "src/assets/svg", // ?ªå?ç¾©è·¯å¾?        "public/icons", // ?¬å…±è³‡æ?è·¯å?
-        "src/components/icons", // çµ„ä»¶?§å?æ¨?      ],
+        "src/assets/icons", // ?ï¿½è¨­è·¯ï¿½?
+        "src/assets/svg", // ?ï¿½ï¿½?ç¾©è·¯ï¿½?        "public/icons", // ?ï¿½å…±è³‡ï¿½?è·¯ï¿½?
+        "src/components/icons", // çµ„ä»¶?ï¿½ï¿½?ï¿½?      ],
       defaultSize: 24,
       defaultColor: "currentColor",
     }),
@@ -23,38 +24,39 @@ export default defineConfig({
 });
 ```
 
-### ?¨ç?ä»¶ä¸­ä½¿ç”¨
+### ?ï¿½ï¿½?ä»¶ä¸­ä½¿ç”¨
 
 ```vue
 <template>
-  <!-- ä½¿ç”¨?¨å??ç½®?„è·¯å¾?-->
+  <!-- ä½¿ç”¨?ï¿½ï¿½??ï¿½ç½®?ï¿½è·¯ï¿½?-->
   <SvgIcon name="home" />
 
-  <!-- ä½¿ç”¨çµ„ä»¶ç´šåˆ¥?„è‡ªå®šç¾©è·¯å? -->
+  <!-- ä½¿ç”¨çµ„ä»¶ç´šåˆ¥?ï¿½è‡ªå®šç¾©è·¯ï¿½? -->
   <SvgIcon name="custom-icon" :paths="['./custom-icons', '../shared/icons']" />
 </template>
 
 <script setup>
-import { SvgIcon } from "@evanz1215/vue-svg-icon";
+import { SvgIcon } from "vue-smart-icons";
 </script>
 ```
 
-### ?‹è??‚é?ç½?
+### ?ï¿½ï¿½??ï¿½ï¿½?ï¿½?
+
 ```typescript
 // main.ts
 import { createApp } from "vue";
 import App from "./App.vue";
-import VueSvgIcon, { setSvgIconConfig } from "@evanz1215/vue-svg-icon";
+import VueSvgIcon, { setSvgIconConfig } from "vue-smart-icons";
 
 const app = createApp(App);
 
-// ?¹æ? 1: ä½¿ç”¨?’ä»¶?¸é?
+// ?ï¿½ï¿½? 1: ä½¿ç”¨?ï¿½ä»¶?ï¿½ï¿½?
 app.use(VueSvgIcon, {
   iconPaths: ["src/assets/icons", "src/assets/svg"],
   defaultSize: 32,
 });
 
-// ?¹æ? 2: ?´æ¥è¨­ç½®?ç½®
+// ?ï¿½ï¿½? 2: ?ï¿½æ¥è¨­ç½®?ï¿½ç½®
 setSvgIconConfig({
   iconPaths: ["src/assets/icons", "src/assets/svg"],
   defaultSize: 32,
@@ -64,18 +66,18 @@ setSvgIconConfig({
 app.mount("#app");
 ```
 
-## Nuxt 3 ?ç½®
+## Nuxt 3 ?ï¿½ç½®
 
 ### nuxt.config.ts
 
 ```typescript
 export default defineNuxtConfig({
-  modules: ["@evanz1215/vue-svg-icon/nuxt"],
+  modules: ["vue-smart-icons/nuxt"],
   svgIcon: {
     iconPaths: [
-      "~/assets/icons", // ?è¨­ Nuxt è·¯å?
-      "~/assets/svg", // ?ªå?ç¾©è·¯å¾?      "~/public/icons", // ?¬å…±è³‡æ?
-      "~/components/icons", // çµ„ä»¶?§å?æ¨?    ],
+      "~/assets/icons", // ?ï¿½è¨­ Nuxt è·¯ï¿½?
+      "~/assets/svg", // ?ï¿½ï¿½?ç¾©è·¯ï¿½?      "~/public/icons", // ?ï¿½å…±è³‡ï¿½?
+      "~/components/icons", // çµ„ä»¶?ï¿½ï¿½?ï¿½?    ],
     defaultSize: 24,
     defaultColor: "currentColor",
   },
@@ -83,34 +85,32 @@ export default defineNuxtConfig({
 ```
 
 ### ??Nuxt çµ„ä»¶ä¸­ä½¿??
+
 ```vue
 <template>
-  <!-- ?ªå?å°å…¥ï¼Œç„¡?€?‹å? import -->
+  <!-- ?ï¿½ï¿½?å°å…¥ï¼Œç„¡?ï¿½?ï¿½ï¿½? import -->
   <SvgIcon name="home" />
 
-  <!-- ä½¿ç”¨çµ„ä»¶ç´šåˆ¥?„è‡ªå®šç¾©è·¯å? -->
+  <!-- ä½¿ç”¨çµ„ä»¶ç´šåˆ¥?ï¿½è‡ªå®šç¾©è·¯ï¿½? -->
   <SvgIcon name="nuxt-icon" :paths="['~/assets/special-icons']" />
 </template>
 ```
 
-## ?•æ??ç½®è·¯å?
+## ?ï¿½ï¿½??ï¿½ç½®è·¯ï¿½?
 
 ```typescript
-import {
-  addIconPath,
-  removeIconPath,
-  resetIconPaths,
-} from "@evanz1215/vue-svg-icon";
+import { addIconPath, removeIconPath, resetIconPaths } from "vue-smart-icons";
 
-// æ·»å??°è·¯å¾?addIconPath("src/new-icons");
+// æ·»ï¿½??ï¿½è·¯ï¿½?addIconPath("src/new-icons");
 
-// ç§»é™¤è·¯å?
+// ç§»é™¤è·¯ï¿½?
 removeIconPath("src/old-icons");
 
-// ?ç½®?ºé?è¨­è·¯å¾?resetIconPaths();
+// ?ï¿½ç½®?ï¿½ï¿½?è¨­è·¯ï¿½?resetIconPaths();
 ```
 
-## è·¯å??ªå?ç´?
-1. çµ„ä»¶ `paths` å±¬æ€§ï??€é«˜å„ª?ˆç?ï¼?2. ?‹è??‚é?ç½®ç?è·¯å?
-3. ?’ä»¶/æ¨¡å??ç½®?„è·¯å¾?4. ?è¨­è·¯å?ï¼ˆæ?ä½å„ª?ˆç?ï¼?
-?–æ?è¼‰å…¥?¨æ??‰ç…§?ªå?ç´šé?åºå?è©¦è??¥ï??¾åˆ°ç¬¬ä??‹åŒ¹?ç??–æ??³å?æ­¢ã€?
+## è·¯ï¿½??ï¿½ï¿½?ï¿½?
+
+1. çµ„ä»¶ `paths` å±¬æ€§ï¿½??ï¿½é«˜å„ª?ï¿½ï¿½?ï¿½?2. ?ï¿½ï¿½??ï¿½ï¿½?ç½®ï¿½?è·¯ï¿½?
+2. ?ï¿½ä»¶/æ¨¡ï¿½??ï¿½ç½®?ï¿½è·¯ï¿½?4. ?ï¿½è¨­è·¯ï¿½?ï¼ˆï¿½?ä½å„ª?ï¿½ï¿½?ï¿½?
+   ?ï¿½ï¿½?è¼‰å…¥?ï¿½ï¿½??ï¿½ç…§?ï¿½ï¿½?ç´šï¿½?åºï¿½?è©¦ï¿½??ï¿½ï¿½??ï¿½åˆ°ç¬¬ï¿½??ï¿½åŒ¹?ï¿½ï¿½??ï¿½ï¿½??ï¿½ï¿½?æ­¢ï¿½?

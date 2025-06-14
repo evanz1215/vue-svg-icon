@@ -1,44 +1,45 @@
-# ?¼ä??‡å?
+# ?ï¿½ï¿½??ï¿½ï¿½?
 
-## æº–å??¼ä?
+## æº–ï¿½??ï¿½ï¿½?
 
-1. **?´æ–°?ˆæœ¬??*
+1. \*_?ï¿½æ–°?ï¿½æœ¬??_
 
    ```bash
    npm version patch  # ??minor, major
    ```
 
-2. **å»ºç½®åº?*
+2. \*_å»ºç½®ï¿½?_
 
    ```bash
    npm run build:lib
    ```
 
-3. **æ¸¬è©¦å»ºç½®çµæ?**
+3. **æ¸¬è©¦å»ºç½®çµï¿½?**
 
    ```bash
    npm pack --dry-run
    ```
 
-4. **?¼ä???npm**
+4. **?ï¿½ï¿½???npm**
    ```bash
    npm publish
    ```
 
-## ?®é?çµæ?
+## ?ï¿½ï¿½?çµï¿½?
 
-å»ºç½®å¾Œç? `dist/` ?®é??…å«ï¼?
+å»ºç½®å¾Œï¿½? `dist/` ?ï¿½ï¿½??ï¿½å«ï¿½?
+
 ```
 dist/
-?œâ??€ index.d.ts              # ä¸»è?é¡å?å®šç¾©
-?œâ??€ nuxt.d.ts              # Nuxt ?’ä»¶é¡å?å®šç¾©
-?œâ??€ vue-svg-icon.js        # ES æ¨¡ç?
-?œâ??€ vue-svg-icon.umd.cjs   # UMD ?¼å?
-?œâ??€ vue-svg-icon.css       # æ¨???‡ä»¶
-?”â??€ *.js                   # ?•æ?è¼‰å…¥??SVG æª”æ?
+?ï¿½ï¿½??ï¿½ index.d.ts              # ä¸»ï¿½?é¡ï¿½?å®šç¾©
+?ï¿½ï¿½??ï¿½ nuxt.d.ts              # Nuxt ?ï¿½ä»¶é¡ï¿½?å®šç¾©
+?ï¿½ï¿½??ï¿½ vue-svg-icon.js        # ES æ¨¡ï¿½?
+?ï¿½ï¿½??ï¿½ vue-svg-icon.umd.cjs   # UMD ?ï¿½ï¿½?
+?ï¿½ï¿½??ï¿½ vue-svg-icon.css       # ï¿½???ï¿½ä»¶
+?ï¿½ï¿½??ï¿½ *.js                   # ?ï¿½ï¿½?è¼‰å…¥??SVG æª”ï¿½?
 ```
 
-## ä½¿ç”¨?¹å?
+## ä½¿ç”¨?ï¿½ï¿½?
 
 ### Vite + Vue 3
 
@@ -46,8 +47,8 @@ dist/
 // main.ts
 import { createApp } from "vue";
 import App from "./App.vue";
-import VueSvgIcon from "@evanz1215/vue-svg-icon";
-import "@evanz1215/vue-svg-icon/dist/vue-svg-icon.css";
+import VueSvgIcon from "vue-smart-icons";
+import "vue-smart-icons/dist/vue-svg-icon.css";
 
 const app = createApp(App);
 app.use(VueSvgIcon);
@@ -58,14 +59,14 @@ app.mount("#app");
 
 ```typescript
 // plugins/svg-icon.client.ts
-import VueSvgIcon from "@evanz1215/vue-svg-icon/nuxt";
+import VueSvgIcon from "vue-smart-icons/nuxt";
 
 export default VueSvgIcon;
 ```
 
-## æ³¨æ?äº‹é?
+## æ³¨ï¿½?äº‹ï¿½?
 
-1. **SVG æª”æ??¾ç½®**ï¼šå? SVG æª”æ??¾åœ¨ `src/assets/icons/` ??`assets/icons/` ?®é?
-2. **æ¨??å¼•å…¥**ï¼šè?å¾—å???CSS æª”æ?
-3. **é¡å??¯æ´**ï¼šå??´ç? TypeScript ?¯æ´
-4. **Tree-shaking**ï¼šæ”¯?´æ??€è¼‰å…¥
+1. **SVG æª”ï¿½??ï¿½ç½®**ï¼šï¿½? SVG æª”ï¿½??ï¿½åœ¨ `src/assets/icons/` ??`assets/icons/` ?ï¿½ï¿½?
+2. **ï¿½??å¼•å…¥**ï¼šï¿½?å¾—ï¿½???CSS æª”ï¿½?
+3. **é¡ï¿½??ï¿½æ´**ï¼šï¿½??ï¿½ï¿½? TypeScript ?ï¿½æ´
+4. **Tree-shaking**ï¼šæ”¯?ï¿½ï¿½??ï¿½è¼‰å…¥

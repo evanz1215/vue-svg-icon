@@ -1,37 +1,32 @@
-# Vue SVG Icon Library
+# Vue Smart Icons
 
 [![GitHub License](https://img.shields.io/github/license/evanz1215/vue-svg-icon)](https://github.com/evanz1215/vue-svg-icon/blob/main/LICENSE)
-[![npm version](https://img.shields.io/npm/v/@evanz1215/vue-svg-icon)](https://www.npmjs.com/package/@evanz1215/vue-svg-icon)
+[![npm version](https://img.shields.io/npm/v/vue-smart-icons)](https://www.npmjs.com/package/vue-smart-icons)
 [![GitHub stars](https://img.shields.io/github/stars/evanz1215/vue-svg-icon)](https://github.com/evanz1215/vue-svg-icon/stargazers)
 [![GitHub issues](https://img.shields.io/github/issues/evanz1215/vue-svg-icon)](https://github.com/evanz1215/vue-svg-icon/issues)
 
-一個為 Vue 3 設計的 SVG 圖標組件庫，支援動態載入、TypeScript 和快取功能。
+一?�為 Vue 3 設�???SVG ?��?組件庫�??�援?��?載入?�TypeScript ?�快?��??��?
 
-## 特色功能
+## ?�色?�能
 
-- ✅ Vue 3 Composition API
-- ✅ TypeScript 支援
-- ✅ 動態 SVG 載入
-- ✅ 記憶體快取
-- ✅ 支援 Vite 和 Nuxt 3
-- ✅ 自訂尺寸和顏色
-- ✅ **自訂圖標路徑配置**
-- ✅ **Vite 插件和 Nuxt 模塊**
-- ✅ Tree-shaking 支援
-- ✅ 載入和錯誤狀態
-- ✅ 無依賴（僅依賴 Vue 3）
+- ??Vue 3 Composition API
+- ??TypeScript ?�援
+- ???��? SVG 載入
+- ??記憶體快??- ???�援 Vite ??Nuxt 3
+- ???��?尺寸?��???- ??**?��??��?路�??�置**
+- ??**Vite ?�件??Nuxt 模�?**
+- ??Tree-shaking ?�援
+- ??載入?�錯誤�???- ???��?賴�??��?�?Vue 3�?
 
-## 安裝
+## 安�?
 
 ```bash
-npm install @evanz1215/vue-svg-icon
-# 或
-yarn add @evanz1215/vue-svg-icon
-# 或
-pnpm add @evanz1215/vue-svg-icon
+npm install vue-smart-icons
+# ??yarn add vue-smart-icons
+# ??pnpm add vue-smart-icons
 ```
 
-## 使用方式
+## 使用?��?
 
 ### Vite + Vue 3
 
@@ -39,7 +34,7 @@ pnpm add @evanz1215/vue-svg-icon
 // vite.config.ts
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-import { viteSvgIcon } from '@evanz1215/vue-svg-icon/vite'
+import { viteSvgIcon } from "vue-smart-icons/vite";
 
 export default defineConfig({
   plugins: [
@@ -56,7 +51,7 @@ export default defineConfig({
 // main.ts
 import { createApp } from "vue";
 import App from "./App.vue";
-import { VueSvgIconPlugin } from "@evanz1215/vue-svg-icon";
+import { VueSvgIconPlugin } from "vue-smart-icons";
 
 const app = createApp(App);
 app.use(VueSvgIconPlugin, {
@@ -65,7 +60,7 @@ app.use(VueSvgIconPlugin, {
 app.mount("#app");
 ```
 
-或者按需引入：
+?�者�??�引入�?
 
 ```vue
 <template>
@@ -73,7 +68,7 @@ app.mount("#app");
 </template>
 
 <script setup>
-import { SvgIcon } from "@evanz1215/vue-svg-icon";
+import { SvgIcon } from "vue-smart-icons";
 </script>
 ```
 
@@ -82,7 +77,7 @@ import { SvgIcon } from "@evanz1215/vue-svg-icon";
 ```typescript
 // nuxt.config.ts
 export default defineNuxtConfig({
-  modules: ["@evanz1215/vue-svg-icon/nuxt"],
+  modules: ["vue-smart-icons/nuxt"],
   svgIcon: {
     iconPaths: ["~/assets/icons", "~/assets/svg"],
     defaultSize: 24,
@@ -95,59 +90,58 @@ export default defineNuxtConfig({
 
 ### Props
 
-| 屬性    | 類型               | 預設值           | 說明                                    |
+| 屬�?    | 類�?               | ?�設??           | 說�?                                    |
 | ------- | ------------------ | ---------------- | --------------------------------------- |
-| `name`  | `string`           | -                | SVG 檔案名稱（不含 .svg 副檔名）        |
-| `size`  | `string \| number` | `24`             | 圖標尺寸，可以是數字（px）或 CSS 尺寸值 |
-| `color` | `string`           | `'currentColor'` | 圖標顏色                                |
-| `class` | `string`           | `''`             | 自訂 CSS 類別                           |
-| `paths` | `string[]`         | `[]`             | 自訂圖標路徑陣列，優先於全局配置        |
+| `name`  | `string`           | -                | SVG 檔�??�稱（�???.svg ?��??��?         |
+| `size`  | `string \| number` | `24`             | ?��?尺寸，可以是?��?（px）�? CSS 尺寸?? |
+| `color` | `string`           | `'currentColor'` | ?��?顏色                                |
+| `class` | `string`           | `''`             | ?��? CSS 類別                           |
+| `paths` | `string[]`         | `[]`             | ?��??��?路�????，優?�於?��??�置         |
 
-## 配置選項
+## ?�置?��?
 
-### 全局配置
+### ?��??�置
 
 ```typescript
 interface InstallOptions {
-  iconPaths?: string[]; // 圖標路徑陣列
-  defaultSize?: string | number; // 預設尺寸
-  defaultColor?: string; // 預設顏色
+  iconPaths?: string[]; // ?��?路�????
+  defaultSize?: string | number; // ?�設尺寸
+  defaultColor?: string; // ?�設顏色
 }
 ```
 
-### Vite 插件選項
+### Vite ?�件?��?
 
 ```typescript
 interface ViteSvgIconOptions {
-  iconPaths?: string[]; // 圖標路徑陣列
-  defaultSize?: string | number; // 預設尺寸
-  defaultColor?: string; // 預設顏色
+  iconPaths?: string[]; // ?��?路�????
+  defaultSize?: string | number; // ?�設尺寸
+  defaultColor?: string; // ?�設顏色
 }
 ```
 
-### Nuxt 模塊選項
+### Nuxt 模�??��?
 
 ```typescript
 interface NuxtSvgIconOptions {
-  iconPaths?: string[]; // 圖標路徑陣列
-  defaultSize?: string | number; // 預設尺寸
-  defaultColor?: string; // 預設顏色
+  iconPaths?: string[]; // ?��?路�????
+  defaultSize?: string | number; // ?�設尺寸
+  defaultColor?: string; // ?�設顏色
 }
 ```
 
-## 開發
+## ?�發
 
 ```bash
-# 安裝依賴
+# 安�?依賴
 npm install
 
-# 建置庫
-npm run build
+# 建置�?npm run build
 
-# 生成類型定義
+# ?��?類�?定義
 npm run build:types
 ```
 
-## 授權
+## ?��?
 
 MIT License

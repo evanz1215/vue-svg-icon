@@ -1,7 +1,7 @@
 {
-  "name": "@evanz1215/vue-svg-icon",
+  "name": "vue-smart-icons",
   "version": "1.0.0",
-  "description": "A Vue 3 SVG icon component library with dynamic loading, TypeScript support, and caching",
+  "description": "A Vue 3 smart SVG icon component library with dynamic loading, intelligent caching, and TypeScript support",
   "type": "module",
   "main": "./dist/vue-svg-icon.umd.cjs",
   "module": "./dist/vue-svg-icon.js",

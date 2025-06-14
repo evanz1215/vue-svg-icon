@@ -2,7 +2,7 @@
 
 ## 套件信息
 
-- **套件名稱**: `@evanz1215/vue-svg-icon`
+- **套件名稱**: `vue-smart-icons`
 - **版本**: `1.0.0`
 - **發佈時間**: 2025年6月14日
 - **許可證**: MIT
@@ -10,20 +10,20 @@
 
 ## 📦 NPM 連結
 
-- **套件頁面**: https://www.npmjs.com/package/@evanz1215/vue-svg-icon
-- **下載統計**: https://npm-stat.com/charts.html?package=@evanz1215/vue-svg-icon
+- **套件頁面**: https://www.npmjs.com/package/vue-smart-icons
+- **下載統計**: https://npm-stat.com/charts.html?package=vue-smart-icons
 
 ## 🚀 安裝方式
 
 ```bash
 # npm
-npm install @evanz1215/vue-svg-icon
+npm install vue-smart-icons
 
 # yarn
-yarn add @evanz1215/vue-svg-icon
+yarn add vue-smart-icons
 
 # pnpm
-pnpm add @evanz1215/vue-svg-icon
+pnpm add vue-smart-icons
 ```
 
 ## 📋 套件內容
@@ -85,4 +85,4 @@ npm publish
 
 ---
 
-**感謝您使用 @evanz1215/vue-svg-icon！** 🎊
+**感謝您使用 vue-smart-icons！** 🎊

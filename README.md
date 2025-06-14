@@ -5,28 +5,33 @@
 [![GitHub stars](https://img.shields.io/github/stars/evanz1215/vue-svg-icon)](https://github.com/evanz1215/vue-svg-icon/stargazers)
 [![GitHub issues](https://img.shields.io/github/issues/evanz1215/vue-svg-icon)](https://github.com/evanz1215/vue-svg-icon/issues)
 
-一?�為 Vue 3 設�???SVG ?��?組件庫�??�援?��?載入?�TypeScript ?�快?��??��?
+一個為 Vue 3 設計的智慧 SVG 圖標組件庫，支援動態載入、TypeScript 和智慧快取功能。
 
-## ?�色?�能
+## 特色功能
 
-- ??Vue 3 Composition API
-- ??TypeScript ?�援
-- ???��? SVG 載入
-- ??記憶體快??- ???�援 Vite ??Nuxt 3
-- ???��?尺寸?��???- ??**?��??��?路�??�置**
-- ??**Vite ?�件??Nuxt 模�?**
-- ??Tree-shaking ?�援
-- ??載入?�錯誤�???- ???��?賴�??��?�?Vue 3�?
+- ✅ Vue 3 Composition API
+- ✅ TypeScript 支援
+- ✅ 動態 SVG 載入
+- ✅ 記憶體快取
+- ✅ 支援 Vite 和 Nuxt 3
+- ✅ 自訂尺寸和顏色
+- ✅ **自訂圖標路徑配置**
+- ✅ **Vite 插件和 Nuxt 模組**
+- ✅ Tree-shaking 支援
+- ✅ 載入和錯誤狀態
+- ✅ 無依賴（僅依賴 Vue 3）
 
-## 安�?
+## 安裝
 
 ```bash
 npm install vue-smart-icons
-# ??yarn add vue-smart-icons
-# ??pnpm add vue-smart-icons
+# 或
+yarn add vue-smart-icons
+# 或
+pnpm add vue-smart-icons
 ```
 
-## 使用?��?
+## 使用方法
 
 ### Vite + Vue 3
 
@@ -60,7 +65,7 @@ app.use(VueSvgIconPlugin, {
 app.mount("#app");
 ```
 
-?�者�??�引入�?
+或者直接引入：
 
 ```vue
 <template>
@@ -90,58 +95,59 @@ export default defineNuxtConfig({
 
 ### Props
 
-| 屬�?    | 類�?               | ?�設??           | 說�?                                    |
-| ------- | ------------------ | ---------------- | --------------------------------------- |
-| `name`  | `string`           | -                | SVG 檔�??�稱（�???.svg ?��??��?         |
-| `size`  | `string \| number` | `24`             | ?��?尺寸，可以是?��?（px）�? CSS 尺寸?? |
-| `color` | `string`           | `'currentColor'` | ?��?顏色                                |
-| `class` | `string`           | `''`             | ?��? CSS 類別                           |
-| `paths` | `string[]`         | `[]`             | ?��??��?路�????，優?�於?��??�置         |
+| 屬性    | 類型               | 預設值           | 說明                                  |
+| ------- | ------------------ | ---------------- | ------------------------------------- |
+| `name`  | `string`           | -                | SVG 檔案名稱（不包含 .svg 副檔名）    |
+| `size`  | `string \| number` | `24`             | 圖標尺寸，可以是數字（px）或 CSS 尺寸 |
+| `color` | `string`           | `'currentColor'` | 圖標顏色                              |
+| `class` | `string`           | `''`             | 額外 CSS 類別                         |
+| `paths` | `string[]`         | `[]`             | 自訂圖標路徑陣列，優先於全域配置      |
 
-## ?�置?��?
+## 配置選項
 
-### ?��??�置
+### 插件配置
 
 ```typescript
 interface InstallOptions {
-  iconPaths?: string[]; // ?��?路�????
-  defaultSize?: string | number; // ?�設尺寸
-  defaultColor?: string; // ?�設顏色
+  iconPaths?: string[]; // 圖標路徑陣列
+  defaultSize?: string | number; // 預設尺寸
+  defaultColor?: string; // 預設顏色
 }
 ```
 
-### Vite ?�件?��?
+### Vite 插件配置
 
 ```typescript
 interface ViteSvgIconOptions {
-  iconPaths?: string[]; // ?��?路�????
-  defaultSize?: string | number; // ?�設尺寸
-  defaultColor?: string; // ?�設顏色
+  iconPaths?: string[]; // 圖標路徑陣列
+  defaultSize?: string | number; // 預設尺寸
+  defaultColor?: string; // 預設顏色
 }
 ```
 
-### Nuxt 模�??��?
+### Nuxt 模組配置
 
 ```typescript
 interface NuxtSvgIconOptions {
-  iconPaths?: string[]; // ?��?路�????
-  defaultSize?: string | number; // ?�設尺寸
-  defaultColor?: string; // ?�設顏色
+  iconPaths?: string[]; // 圖標路徑陣列
+  defaultSize?: string | number; // 預設尺寸
+  defaultColor?: string; // 預設顏色
 }
 ```
 
-## ?�發
+## 開發
 
 ```bash
-# 安�?依賴
+# 安裝依賴
 npm install
 
-# 建置�?npm run build
+# 建置
+npm run build
 
-# ?��?類�?定義
+# 產生型別定義
 npm run build:types
 ```
 
-## ?��?
+## 授權
 
 MIT License

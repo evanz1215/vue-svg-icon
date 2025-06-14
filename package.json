@@ -1,0 +1,77 @@
+{
+  "name": "@evanz1215/vue-svg-icon",
+  "version": "1.0.0",
+  "description": "A Vue 3 SVG icon component library with dynamic loading, TypeScript support, and caching",
+  "type": "module",
+  "main": "./dist/vue-svg-icon.umd.cjs",
+  "module": "./dist/vue-svg-icon.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/vue-svg-icon.js",
+      "require": "./dist/vue-svg-icon.umd.cjs"
+    },
+    "./nuxt": {
+      "types": "./dist/nuxt.d.ts",
+      "import": "./dist/nuxt-module.js"
+    },
+    "./vite": {
+      "types": "./dist/vite-plugin.d.ts",
+      "import": "./dist/vite-plugin.js"
+    },
+    "./dist/vue-svg-icon.css": "./dist/vue-svg-icon.css"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "npm run build:lib && npm run build:plugins",
+    "build:lib": "vue-tsc && vite build --mode lib",
+    "build:plugins": "vite build",
+    "clean": "rimraf dist",
+    "prepublishOnly": "npm run clean && npm run build",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "format:src": "prettier --write src/**/*.{ts,vue,js,json}"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "svg",
+    "icon",
+    "component",
+    "typescript",
+    "vite",
+    "nuxt"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/vue-svg-icon.git"
+  },
+  "homepage": "https://github.com/your-username/vue-svg-icon#readme",
+  "bugs": {
+    "url": "https://github.com/your-username/vue-svg-icon/issues"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "dependencies": {
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.1",
+    "@vitejs/plugin-vue": "^5.2.3",
+    "@vue/tsconfig": "^0.7.0",
+    "prettier": "^3.5.3",
+    "rimraf": "^6.0.1",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5",
+    "vite-plugin-dts": "^4.5.4",
+    "vue-tsc": "^2.2.8"
+  }
+}

@@ -1,59 +1,54 @@
-# Vue SVG Icon 使用範例
+# Vue SVG Icon 使用範�?
 
-## 安裝和使用
-
-### 1. ES 模組使用（推薦）
+## 安�??�使??
+### 1. ES 模�?使用（推?��?
 
 ```typescript
-// 使用命名匯出 - 推薦方式
-import { VueSvgIconPlugin, SvgIcon } from "@your-scope/vue-svg-icon";
-import "@your-scope/vue-svg-icon/dist/vue-svg-icon.css";
+// 使用?��??�出 - ?�薦?��?
+import { VueSvgIconPlugin, SvgIcon } from "@evanz1215/vue-svg-icon";
+import "@evanz1215/vue-svg-icon/dist/vue-svg-icon.css";
 
-// 安裝插件
+// 安�??�件
 app.use(VueSvgIconPlugin, {
   iconPaths: ["src/assets/icons"],
   defaultSize: 24,
   defaultColor: "currentColor",
 });
 
-// 或直接使用組件
-import { SvgIcon } from "@your-scope/vue-svg-icon";
+// ?�直?�使?��?�?import { SvgIcon } from "@evanz1215/vue-svg-icon";
 ```
 
-### 2. UMD 使用（瀏覽器）
+### 2. UMD 使用（瀏覽?��?
 
 ```html
 <script src="vue-svg-icon.umd.cjs"></script>
 <script>
-  // 使用命名匯出
+  // 使用?��??�出
   const { VueSvgIconPlugin, SvgIcon } = VueSvgIcon;
 
   app.use(VueSvgIconPlugin);
 </script>
 ```
 
-### 3. 向後相容（仍支援預設匯出）
-
+### 3. ?��??�容（�??�援?�設?�出�?
 ```typescript
-// 仍然支援預設匯出，但不推薦
-import VueSvgIconPlugin from "@your-scope/vue-svg-icon";
+// 仍然?�援?�設?�出，�?不推??import VueSvgIconPlugin from "@evanz1215/vue-svg-icon";
 app.use(VueSvgIconPlugin);
 ```
 
-## API 說明
+## API 說�?
 
-### 主要匯出
+### 主�??�出
 
-- `VueSvgIconPlugin` - Vue 插件
-- `SvgIcon` - SVG 圖標組件
-- `setSvgIconConfig` - 設置配置
-- `getSvgIconConfig` - 獲取配置
-- `addIconPath` - 添加圖標路徑
-- `removeIconPath` - 移除圖標路徑
-- `resetIconPaths` - 重置圖標路徑
-- `viteSvgIcon` - Vite 插件
+- `VueSvgIconPlugin` - Vue ?�件
+- `SvgIcon` - SVG ?��?組件
+- `setSvgIconConfig` - 設置?�置
+- `getSvgIconConfig` - ?��??�置
+- `addIconPath` - 添�??��?路�?
+- `removeIconPath` - 移除?��?路�?
+- `resetIconPaths` - ?�置?��?路�?
+- `viteSvgIcon` - Vite ?�件
 
-### 類型定義
+### 類�?定義
 
-- `SvgIconProps` - 組件屬性類型
-- `InstallOptions` - 安裝選項類型
+- `SvgIconProps` - 組件屬性�???- `InstallOptions` - 安�??��?類�?

@@ -1,45 +1,44 @@
-# 發佈指南
+# ?��??��?
 
-## 準備發佈
+## 準�??��?
 
-1. **更新版本號**
+1. **?�新?�本??*
 
    ```bash
-   npm version patch  # 或 minor, major
+   npm version patch  # ??minor, major
    ```
 
-2. **建置庫**
+2. **建置�?*
 
    ```bash
    npm run build:lib
    ```
 
-3. **測試建置結果**
+3. **測試建置結�?**
 
    ```bash
    npm pack --dry-run
    ```
 
-4. **發佈到 npm**
+4. **?��???npm**
    ```bash
    npm publish
    ```
 
-## 目錄結構
+## ?��?結�?
 
-建置後的 `dist/` 目錄包含：
-
+建置後�? `dist/` ?��??�含�?
 ```
 dist/
-├── index.d.ts              # 主要類型定義
-├── nuxt.d.ts              # Nuxt 插件類型定義
-├── vue-svg-icon.js        # ES 模組
-├── vue-svg-icon.umd.cjs   # UMD 格式
-├── vue-svg-icon.css       # 樣式文件
-└── *.js                   # 動態載入的 SVG 檔案
+?��??� index.d.ts              # 主�?類�?定義
+?��??� nuxt.d.ts              # Nuxt ?�件類�?定義
+?��??� vue-svg-icon.js        # ES 模�?
+?��??� vue-svg-icon.umd.cjs   # UMD ?��?
+?��??� vue-svg-icon.css       # �???�件
+?��??� *.js                   # ?��?載入??SVG 檔�?
 ```
 
-## 使用方式
+## 使用?��?
 
 ### Vite + Vue 3
 
@@ -47,8 +46,8 @@ dist/
 // main.ts
 import { createApp } from "vue";
 import App from "./App.vue";
-import VueSvgIcon from "@your-scope/vue-svg-icon";
-import "@your-scope/vue-svg-icon/dist/vue-svg-icon.css";
+import VueSvgIcon from "@evanz1215/vue-svg-icon";
+import "@evanz1215/vue-svg-icon/dist/vue-svg-icon.css";
 
 const app = createApp(App);
 app.use(VueSvgIcon);
@@ -59,14 +58,14 @@ app.mount("#app");
 
 ```typescript
 // plugins/svg-icon.client.ts
-import VueSvgIcon from "@your-scope/vue-svg-icon/nuxt";
+import VueSvgIcon from "@evanz1215/vue-svg-icon/nuxt";
 
 export default VueSvgIcon;
 ```
 
-## 注意事項
+## 注�?事�?
 
-1. **SVG 檔案放置**：將 SVG 檔案放在 `src/assets/icons/` 或 `assets/icons/` 目錄
-2. **樣式引入**：記得引入 CSS 檔案
-3. **類型支援**：完整的 TypeScript 支援
-4. **Tree-shaking**：支援按需載入
+1. **SVG 檔�??�置**：�? SVG 檔�??�在 `src/assets/icons/` ??`assets/icons/` ?��?
+2. **�??引入**：�?得�???CSS 檔�?
+3. **類�??�援**：�??��? TypeScript ?�援
+4. **Tree-shaking**：支?��??�載入

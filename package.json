@@ -51,7 +51,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/evanz1215/vue-svg-icon.git"
+    "url": "git+https://github.com/evanz1215/vue-svg-icon.git"
   },
   "homepage": "https://github.com/evanz1215/vue-svg-icon#readme",
   "bugs": {
@@ -73,5 +73,8 @@
     "vite": "^6.3.5",
     "vite-plugin-dts": "^4.5.4",
     "vue-tsc": "^2.2.8"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

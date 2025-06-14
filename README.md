@@ -1,7 +1,7 @@
 # Vue SVG Icon Library
 
 [![GitHub License](https://img.shields.io/github/license/evanz1215/vue-svg-icon)](https://github.com/evanz1215/vue-svg-icon/blob/main/LICENSE)
-[![npm version](https://img.shields.io/npm/v/@your-scope/vue-svg-icon)](https://www.npmjs.com/package/@your-scope/vue-svg-icon)
+[![npm version](https://img.shields.io/npm/v/@evanz1215/vue-svg-icon)](https://www.npmjs.com/package/@evanz1215/vue-svg-icon)
 [![GitHub stars](https://img.shields.io/github/stars/evanz1215/vue-svg-icon)](https://github.com/evanz1215/vue-svg-icon/stargazers)
 [![GitHub issues](https://img.shields.io/github/issues/evanz1215/vue-svg-icon)](https://github.com/evanz1215/vue-svg-icon/issues)
 
@@ -24,11 +24,11 @@
 ## 安裝
 
 ```bash
-npm install @your-scope/vue-svg-icon
+npm install @evanz1215/vue-svg-icon
 # 或
-yarn add @your-scope/vue-svg-icon
+yarn add @evanz1215/vue-svg-icon
 # 或
-pnpm add @your-scope/vue-svg-icon
+pnpm add @evanz1215/vue-svg-icon
 ```
 
 ## 使用方式
@@ -39,7 +39,7 @@ pnpm add @your-scope/vue-svg-icon
 // vite.config.ts
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-import { viteSvgIcon } from "@your-scope/vue-svg-icon/vite";
+import { viteSvgIcon } from '@evanz1215/vue-svg-icon/vite'
 
 export default defineConfig({
   plugins: [
@@ -56,7 +56,7 @@ export default defineConfig({
 // main.ts
 import { createApp } from "vue";
 import App from "./App.vue";
-import { VueSvgIconPlugin } from "@your-scope/vue-svg-icon";
+import { VueSvgIconPlugin } from "@evanz1215/vue-svg-icon";
 
 const app = createApp(App);
 app.use(VueSvgIconPlugin, {
@@ -73,7 +73,7 @@ app.mount("#app");
 </template>
 
 <script setup>
-import { SvgIcon } from "@your-scope/vue-svg-icon";
+import { SvgIcon } from "@evanz1215/vue-svg-icon";
 </script>
 ```
 
@@ -82,7 +82,7 @@ import { SvgIcon } from "@your-scope/vue-svg-icon";
 ```typescript
 // nuxt.config.ts
 export default defineNuxtConfig({
-  modules: ["@your-scope/vue-svg-icon/nuxt"],
+  modules: ["@evanz1215/vue-svg-icon/nuxt"],
   svgIcon: {
     iconPaths: ["~/assets/icons", "~/assets/svg"],
     defaultSize: 24,

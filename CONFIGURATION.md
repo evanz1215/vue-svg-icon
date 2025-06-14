@@ -1,24 +1,21 @@
-# 配置自定義圖標路徑
-
-## Vite + Vue 3 配置
+# ?�置?��?義�?標路�?
+## Vite + Vue 3 ?�置
 
 ### vite.config.ts
 
 ```typescript
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-import { viteSvgIcon } from "@your-scope/vue-svg-icon";
+import { viteSvgIcon } from "@evanz1215/vue-svg-icon";
 
 export default defineConfig({
   plugins: [
     vue(),
     viteSvgIcon({
       iconPaths: [
-        "src/assets/icons", // 預設路徑
-        "src/assets/svg", // 自定義路徑
-        "public/icons", // 公共資源路徑
-        "src/components/icons", // 組件內圖標
-      ],
+        "src/assets/icons", // ?�設路�?
+        "src/assets/svg", // ?��?義路�?        "public/icons", // ?�共資�?路�?
+        "src/components/icons", // 組件?��?�?      ],
       defaultSize: 24,
       defaultColor: "currentColor",
     }),
@@ -26,39 +23,38 @@ export default defineConfig({
 });
 ```
 
-### 在組件中使用
+### ?��?件中使用
 
 ```vue
 <template>
-  <!-- 使用全局配置的路徑 -->
+  <!-- 使用?��??�置?�路�?-->
   <SvgIcon name="home" />
 
-  <!-- 使用組件級別的自定義路徑 -->
+  <!-- 使用組件級別?�自定義路�? -->
   <SvgIcon name="custom-icon" :paths="['./custom-icons', '../shared/icons']" />
 </template>
 
 <script setup>
-import { SvgIcon } from "@your-scope/vue-svg-icon";
+import { SvgIcon } from "@evanz1215/vue-svg-icon";
 </script>
 ```
 
-### 運行時配置
-
+### ?��??��?�?
 ```typescript
 // main.ts
 import { createApp } from "vue";
 import App from "./App.vue";
-import VueSvgIcon, { setSvgIconConfig } from "@your-scope/vue-svg-icon";
+import VueSvgIcon, { setSvgIconConfig } from "@evanz1215/vue-svg-icon";
 
 const app = createApp(App);
 
-// 方法 1: 使用插件選項
+// ?��? 1: 使用?�件?��?
 app.use(VueSvgIcon, {
   iconPaths: ["src/assets/icons", "src/assets/svg"],
   defaultSize: 32,
 });
 
-// 方法 2: 直接設置配置
+// ?��? 2: ?�接設置?�置
 setSvgIconConfig({
   iconPaths: ["src/assets/icons", "src/assets/svg"],
   defaultSize: 32,
@@ -68,62 +64,53 @@ setSvgIconConfig({
 app.mount("#app");
 ```
 
-## Nuxt 3 配置
+## Nuxt 3 ?�置
 
 ### nuxt.config.ts
 
 ```typescript
 export default defineNuxtConfig({
-  modules: ["@your-scope/vue-svg-icon/nuxt"],
+  modules: ["@evanz1215/vue-svg-icon/nuxt"],
   svgIcon: {
     iconPaths: [
-      "~/assets/icons", // 預設 Nuxt 路徑
-      "~/assets/svg", // 自定義路徑
-      "~/public/icons", // 公共資源
-      "~/components/icons", // 組件內圖標
-    ],
+      "~/assets/icons", // ?�設 Nuxt 路�?
+      "~/assets/svg", // ?��?義路�?      "~/public/icons", // ?�共資�?
+      "~/components/icons", // 組件?��?�?    ],
     defaultSize: 24,
     defaultColor: "currentColor",
   },
 });
 ```
 
-### 在 Nuxt 組件中使用
-
+### ??Nuxt 組件中使??
 ```vue
 <template>
-  <!-- 自動導入，無需手動 import -->
+  <!-- ?��?導入，無?�?��? import -->
   <SvgIcon name="home" />
 
-  <!-- 使用組件級別的自定義路徑 -->
+  <!-- 使用組件級別?�自定義路�? -->
   <SvgIcon name="nuxt-icon" :paths="['~/assets/special-icons']" />
 </template>
 ```
 
-## 動態配置路徑
+## ?��??�置路�?
 
 ```typescript
 import {
   addIconPath,
   removeIconPath,
   resetIconPaths,
-} from "@your-scope/vue-svg-icon";
+} from "@evanz1215/vue-svg-icon";
 
-// 添加新路徑
-addIconPath("src/new-icons");
+// 添�??�路�?addIconPath("src/new-icons");
 
-// 移除路徑
+// 移除路�?
 removeIconPath("src/old-icons");
 
-// 重置為預設路徑
-resetIconPaths();
+// ?�置?��?設路�?resetIconPaths();
 ```
 
-## 路徑優先級
-
-1. 組件 `paths` 屬性（最高優先級）
-2. 運行時配置的路徑
-3. 插件/模塊配置的路徑
-4. 預設路徑（最低優先級）
-
-圖標載入器會按照優先級順序嘗試載入，找到第一個匹配的圖標即停止。
+## 路�??��?�?
+1. 組件 `paths` 屬性�??�高優?��?�?2. ?��??��?置�?路�?
+3. ?�件/模�??�置?�路�?4. ?�設路�?（�?低優?��?�?
+?��?載入?��??�照?��?級�?序�?試�??��??�到第�??�匹?��??��??��?止�?

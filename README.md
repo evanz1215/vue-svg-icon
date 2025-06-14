@@ -1,5 +1,10 @@
 # Vue SVG Icon Library
 
+[![GitHub License](https://img.shields.io/github/license/evanz1215/vue-svg-icon)](https://github.com/evanz1215/vue-svg-icon/blob/main/LICENSE)
+[![npm version](https://img.shields.io/npm/v/@your-scope/vue-svg-icon)](https://www.npmjs.com/package/@your-scope/vue-svg-icon)
+[![GitHub stars](https://img.shields.io/github/stars/evanz1215/vue-svg-icon)](https://github.com/evanz1215/vue-svg-icon/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/evanz1215/vue-svg-icon)](https://github.com/evanz1215/vue-svg-icon/issues)
+
 一個為 Vue 3 設計的 SVG 圖標組件庫，支援動態載入、TypeScript 和快取功能。
 
 ## 特色功能
